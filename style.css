@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #030d04; /* Dark green/black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Container for the logo */
+.logo-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 100, 0.2);
+    background: radial-gradient(circle, rgba(0,200,80,0.1) 0%, rgba(0,0,0,0) 70%);
+}
+
+/* The actual image styling with a green shadow */
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 25px rgba(0, 255, 128, 0.6));
+    animation: pulseGlow 3s infinite alternate;
+}
+
+/* Neon pulsing animation to match the trading fire/energy */
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 128, 0.5)) brightness(1);
+    }
+    100% {
+        filter: drop-shadow(0 0 40px rgba(0, 255, 128, 0.9)) brightness(1.1);
+    }
+}
+
+/* Optional CSS styling if you want to recreate the text style digitally */
+.text-wrapper {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+    display: none; /* Set to 'flex' if you want to use HTML text instead of image text */
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    color: #e6fff0;
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66, 2px 2px 0px #003311;
+    letter-spacing: 2px;
+}
+
+.sub-title {
+    color: #a3ffc2;
+    font-size: 1.8rem;
+    text-shadow: 0 0 8px #00ff66;
+    margin-top: -5px;
+}
+
+.badge {
+    background: linear-gradient(90deg, #003311, #00ff66, #003311);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: 1px solid #00ff66;
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.5);
+}
